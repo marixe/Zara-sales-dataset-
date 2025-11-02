@@ -45,5 +45,10 @@ This repository hosts the **Zara Sales for EDA** dataset — designed for **Expl
 - Product **clustering and segmentation** by attributes  
 - Building simple **forecasting models** or dashboards  
 
+---
+
+## 🔗 Source
+📦 Original dataset on Kaggle:  
+👉 [Zara Sales for EDA — by marixe](https://www.kaggle.com/datasets/marixe/zara-sales-for-eda)
 
 
