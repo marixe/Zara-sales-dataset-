@@ -1,64 +1,49 @@
-# Zara-sales-dataset-
-Dataset de ventas de Zara para análisis exploratorio (EDA).
-
-
 # 🛍️ Zara Sales for EDA
 
-## 📘 Overview  
-This repository contains the dataset **Zara Sales for EDA**, designed for **Exploratory Data Analysis (EDA)** focused on fashion retail.  
-The dataset aggregates multiple public sources (including GitHub and Kaggle datasets) related to **Zara’s fashion products**, with an emphasis on **women’s apparel**.  
-It allows data enthusiasts and analysts to explore **sales behavior, product attributes, and retail trends** in a fast-fashion context.
+This repository hosts the **Zara Sales for EDA** dataset — designed for **Exploratory Data Analysis (EDA)** in the fast-fashion retail domain.
 
 ---
 
-## 📊 Dataset Overview
-| Feature | Description |
-|----------|--------------|
-| **Rows** | +20,000 |
-| **Columns** | 17 |
-| **Focus** | Zara’s fashion products (mostly women’s apparel) |
-| **Language** | English 🇺🇸 |
-| **Purpose** | Analyze retail trends, product attributes, and sales behavior in a fast-fashion context |
+## 📘 Overview
+- **Rows:** +20,000  
+- **Columns:** 17  
+- **Focus:** Zara’s fashion products (mostly women’s apparel)  
+- **Language:** English 🇺🇸  
+- **Purpose:** Analyze retail trends, product attributes, and sales behavior within a fast-fashion context.
+
+> **Origin:** The dataset was created by combining several **public fashion datasets** from GitHub and Kaggle focused on Zara products.  
+> Additional engineered columns (e.g., `season`, `url`) were added, and **oversampling** was applied to increase the number of records from the original ~7K to over **20K** and to balance categories for more effective EDA.
 
 ---
 
-## 🧩 About the Data
-This dataset was created by combining several public **fashion-related datasets** from GitHub and Kaggle.  
-It includes the following key information for each product:
-
-- **Product name**  
-- **Description**  
-- **Price**  
-- **Category**  
-- **Sales volume**  
-
-Additional columns were generated to enhance analysis:
-- **`season`** — assigned automatically based on product names (e.g., *“jacket” → Winter/Autumn*).  
-- **`url`** — constructed using Zara’s base link and the product title.
-
-The **original dataset** had around **7K rows**, and oversampling techniques were applied to expand it to **20K+ rows** and improve category balance for better exploratory analysis.
-
----
-
-## 🧮 Columns Overview (examples)
-| Column | Description |
-|---------|-------------|
-| `product_id` | Unique identifier of the product |
-| `product_name` | Product title |
-| `category` | Type of item (e.g., dresses, jackets, pants) |
-| `price` | Product price in EUR |
-| `sales_volume` | Estimated or recorded sales volume |
-| `season` | Season assigned based on product |
-| `url` | Generated Zara product page link |
+## 🧩 Variable Dictionary (17 columns)
+| Variable | Type | Description |
+|-----------|------|-------------|
+| **Product ID** | Integer | Unique identifier for each product; includes both original and oversampled entries. |
+| **Product Position** | Categorical | In-store placement of the item (e.g., *Aisle*, *End-cap*, *Front of Store*). |
+| **Promotion** | Categorical (Yes/No) | Indicates whether the product was included in a promotion or discount. |
+| **Product Category** | Categorical | Broad product family or category. |
+| **Seasonal** | Categorical (Yes/No) | Flags whether the item belongs to a limited or seasonal collection. |
+| **Season** | Categorical | Logical season label (*Spring*, *Summer*, *Autumn*, *Winter*) assigned from product name/description keywords (e.g., *jacket*, *coat*, *puffer* → *Autumn/Winter*). |
+| **Sales Volume** | Integer | Approximate number of units sold (or demand proxy); useful for trend and regression analysis. |
+| **brand** | Categorical | Brand of the product. |
+| **url** | Text | Synthetic yet realistic product link built by combining Zara’s base URL with the product name. |
+| **name** | Text | Product title as shown on Zara’s online store (e.g., *Slim Fit Suit Jacket*). |
+| **description** | Text | Short product description (design, fit, or features). |
+| **price** | Float | Retail price in **USD**, standardized to Zara’s price ranges. |
+| **currency** | Text | Currency code of the price (mainly **USD**). |
+| **terms** | Categorical | Keyword or subcategory used for grouping (e.g., *jackets*, *shoes*, *sweaters*, *jeans*, *t-shirts*). |
+| **section** | Categorical | Store section the item belongs to (e.g., *WOMAN*, *MAN*). |
+| **material** | Categorical | Main fabric composition (e.g., *Polyester*, *Cotton*, *Wool Blend*). |
+| **origin** | Categorical | Country of manufacture or supply (e.g., *China*, *Bangladesh*, *Cambodia*, *Turkey*). |
 
 ---
 
 ## 💡 Example Use Cases
-- Exploratory analysis of **pricing strategies**  
-- Identifying **seasonal sales trends**  
-- Clustering products by **attributes and categories**  
-- Building dashboards or ML models for **sales prediction**  
+- Exploratory data analysis on **pricing** and **promotions**  
+- Studying **seasonal trends** and fashion cycles  
+- Product **clustering and segmentation** by attributes  
+- Building simple **forecasting models** or dashboards  
 
----
 
-## 📂 Repository Structure
+
